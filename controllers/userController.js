@@ -11,7 +11,8 @@ const getUser = async (req, res) => {
 const signup = async (req, res) => {
   try {
     const { name, email, phone, address, password, pic } = req.body;
-    const activationUrl = "http://localhost:5173/user/activation/";
+    const activationUrl =
+      "https://use-recycle-reuse.netlify.app/user/activation/";
 
     const userExist = await User.findOne({ email });
 
